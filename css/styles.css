@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9fd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.thumb {
+  position: relative;
+  margin: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.thumb > .label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 16px;
+  border-top-left-radius: 4px;
+
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.button2 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.kebab {
+  height: 20px;
+  width: 20px;
+  fill: tomato;
+}
+
+.button3 {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.button3 {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../images/kebab-menu.svg);
+  background-size: contain;
+}
