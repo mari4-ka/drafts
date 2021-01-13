@@ -43,22 +43,45 @@ img {
   background-color: #2196f3;
   color: #fff;
 }
-
-.button2 {
-  display: inline-block;
+.button1 {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
   margin-top: 10px;
   margin-right: 5px;
+
+  cursor: pointer;
+
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.button2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 5px;
+
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: none;
 }
 .kebab {
   height: 40px;
   width: 40px;
-  fill: tomato;
+  fill: black;
 }
 
 .button3 {
@@ -69,23 +92,22 @@ img {
   margin-top: 10px;
   margin-right: 5px;
   cursor: pointer;
+
+  height: 44px;
+  width: 44px;
+  border: none;
+  border-radius: 50%;
   background-color: transparent;
-  border: 1px solid transparent;
-}
-
-.button3 {
-  height: 40px;
-  width: 40px;
   background-image: url(../images/kebab-menu.svg);
-  background-size: contain;
+  background-size: 30px;
   background-repeat: no-repeat;
+  background-position: 50%;
 }
-
-/* .button3::before {
-  content: '';
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-image: url(../images/kebab-menu.svg);
-  background-size: contain;
-} */
+.button1:hover,
+.button2:hover,
+.button3:hover {
+  background-color: #2196f3;
+}
+.button2:hover .kebab {
+  fill: white;
+}
