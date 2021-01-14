@@ -1,106 +1,82 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: brown;
+}
+
+.header {
+  outline: 1px solid blue;
+  background-color: paleturquoise;
+}
+
 .container {
   display: block;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  width: 900px;
-}
-ul {
-  position: absolute;
-}
-li {
-  position: relative;
+  outline: 1px solid red;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.menu {
-  position: relative;
+p {
   margin: 0;
-  padding: 0;
-  list-style: none;
+}
+.menu {
   display: flex;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-
-.menu-item {
-  margin-right: 10px;
+.menu-item,
+.submenu-item {
+  position: relative;
 }
-
 .menu-link {
   display: block;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-
-  background-color: brown;
-  border: 2px solid transparent;
-  border-radius: 5px;
-
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 700;
-  font-size: large;
-  color: beige;
+  padding: 10px;
+  outline: 1px solid saddlebrown;
+  color: aliceblue;
   text-decoration: none;
+  width: 150px;
+}
+
+.menu > .menu-item {
+  background-color: rebeccapurple;
+  margin-left: 20px;
 }
 
 .submenu {
-  padding: 5px;
-  width: 100%;
+  position: absolute;
+  padding: 10px;
+  margin: 0;
   list-style: none;
-  background-color: darkolivegreen;
-  border: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: beige;
-  visibility: hidden;
-  opacity: 0;
-}
-.menu-link:hover {
-  background-color: chocolate;
-}
-.menu-item:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-}
-.menu-item:hover .menu-link {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.submenu-link {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  color: beige;
-}
-
-.submenu-link:hover {
-  background-color: tomato;
-  border-radius: 5px;
+  display: none; /*display: none*/
+  width: 100%;
+  background-color: forestgreen;
+  top: 100%;
+  left: 50%;
 }
 
 .sub-submenu {
-  transform-origin: right top;
-  transform: translate(100%);
-  z-index: 1;
-  top: 50%;
-  right: 0;
-  padding: 5px;
-  width: 100%;
+  position: absolute;
+  padding: 10px;
+  margin: 0;
   list-style: none;
-  background-color: darkolivegreen;
-  border: none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: beige;
+  display: none;
+  width: 100%;
+  background-color: lightseagreen;
+  top: 100%;
+  left: 50%;
 }
-.link {
+
+.menu-item:hover .submenu {
   display: block;
-  padding: 5px;
-  text-decoration: none;
-  color: white;
-  border: 1px solid transparent;
 }
-.link:hover {
-  background-color: turquoise;
-  border: 1px solid turquoise;
-  border-radius: 5px;
+.menu-item:hover .sub-submenu {
+  display: none;
+}
+.submenu:hover .sub-submenu {
+  display: block;
 }
